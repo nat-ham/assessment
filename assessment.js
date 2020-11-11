@@ -25,10 +25,15 @@ assessmentButton.onclick= function(){
     //すでにある診断けっかを削除
     removeAllChildren(resultDivided);
     
+     const h3 =document.createElement('h3');　//h3タグ作った
+    h3.innerText='診断結果'; 
+    resultDivided.appendChild(h3); //result-areaaにh3変数を設定
+        
+        
     const p = document.createElement('p');
-const result = assessment(userName);
-p.innerText = result;
-resultDivided.appendChild(p);
+    const result = assessment(userName);
+　　p.innerText = result;
+　　resultDivided.appendChild(p);
     //result-area 診断結果を表示
 
 
@@ -54,9 +59,7 @@ resultDivided.appendChild(p);
     script.setAttribute('src','https://platform.twitter.com/widgets.js');
     tweetDivided.appendChild(script);
 
-    const h3 =document.createElement('h3');　//h3タグ作った
-    h3.innerText='診断結果'; 
-    resultDivided.appendChild(h3); //result-areaaにh3変数を設定
+
 //診断処理実行
     }
 
